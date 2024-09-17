@@ -1,0 +1,31 @@
+select * From Products
+WHERE TedarikciID BETWEEN 1 and 5;
+
+Select * from Products
+Where TedarikciID IN (1,2,4,5);
+
+SELECT productname FROM Products
+WHERE productname IN ('Chang','Aniseed Syrup');
+
+SELECT * FROM Products
+WHERE TedarikciID = 3 OR unitprice >10;
+
+select productname, unitprice from Products
+
+SELECT * FROM Product
+WHERE productname, UPPER
+                         
+SELECT * FROM Products
+WHERE productname LIKE 'n_';
+                         
+select * from Products
+where stokmiktari > 50;
+
+SELECT * from Products
+where unitprice = (SELECT MAX(unitprice) FROM Products)
+UNION
+SELECT * from Products
+where unitprice = (SELECT MIN(unitprice) from Products)
+
+select * from Products
+where productname LIKE '%spice%';
